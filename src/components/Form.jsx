@@ -9,7 +9,7 @@ export default class Form extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  change = () => {
+  changeStatus = () => {
     this.setState({ buttClick: !this.state.buttClick });
   };
   render() {
@@ -19,7 +19,7 @@ export default class Form extends React.Component {
           <Message
             name={this.state.name}
             birthday={this.state.birthday}
-            onClose={this.change}
+            onClose={this.changeStatus}
           />
         ) : (
           <>
@@ -43,7 +43,7 @@ export default class Form extends React.Component {
                   onChange={this.handleChange}
                 />
               </label>
-              <Button onClick={this.change}></Button>
+              <Button onClick={this.changeStatus}></Button>
             </form>
           </>
         )}
