@@ -1,8 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./back-button.css";
 import { daysToDate } from "../services/date";
 
 export default class Message extends React.Component {
+  static propTypes = {
+    name: PropTypes.string,
+    birthday: PropTypes.string,
+    onClose: PropTypes.func
+  };
   getCorrectUserName = () => {
     return this.props.name || "Anonymous";
   };

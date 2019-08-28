@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button.jsx";
 import Message from "./Message.jsx";
 import Input from "./Input.jsx";
+
 export default class Form extends React.Component {
   state = {
     name: "",
